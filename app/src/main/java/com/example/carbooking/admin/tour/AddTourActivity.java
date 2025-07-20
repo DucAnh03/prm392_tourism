@@ -24,6 +24,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.bumptech.glide.Glide;
 import com.example.carbooking.Entity.Category;
 import com.example.carbooking.Entity.Tour;
 import com.example.carbooking.Entity.Vehicle;
@@ -84,6 +85,9 @@ public class AddTourActivity extends AppCompatActivity {
         spinnerCategory = findViewById(R.id.spinner_category);
         spinnerVehicle = findViewById(R.id.spinner_vehicle);
         edtTourSchedule = findViewById(R.id.edt_tour_schedule);
+        EditText edtImageUrl = findViewById(R.id.edt_image_url);
+        Button btnLoadUrl = findViewById(R.id.btn_load_url);
+        imgView = findViewById(R.id.IVPreviewImage);
         //get listcategory
         try {
             categoryList = categoryRepository.getAllCategory();
@@ -135,6 +139,15 @@ public class AddTourActivity extends AppCompatActivity {
             throw new RuntimeException(e);
         }
         //------------------------
+        btnLoadUrl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = edtImageUrl.getText().toString().trim();
+                if (!url.isEmpty()) {
+                    Glide.with(AddTourActivity.this).load(url).into(imgView);
+                }
+            }
+        });
         btnSave.setOnClickListener(new View.OnClickListener() {
             public int checkInputInteger(){
                 try{
@@ -174,7 +187,12 @@ public class AddTourActivity extends AppCompatActivity {
                 String contact = edtContact.getText().toString();
                 String description = edtDescription.getText().toString();
                 String tourSchedule = edtTourSchedule.getText().toString();
-                String imgPath = saveImageToStorage.saveImageFromImageView(imgView);
+                String imgPath;
+                if (!edtImageUrl.getText().toString().trim().isEmpty()) {
+                    imgPath = edtImageUrl.getText().toString().trim();
+                } else {
+                    imgPath = saveImageToStorage.saveImageFromImageView(imgView);
+                }
                 System.out.println("imgPath: " + imgPath);
                 Toast.makeText(AddTourActivity.this, "img"+ imgPath, Toast.LENGTH_SHORT).show();
                 boolean flag = true;

@@ -45,11 +45,13 @@ public class AddCategoryActivity extends AppCompatActivity {
                     Category category = new Category(categoryName);
                     categoryRepository.createCategory(category);
                     Toast.makeText(AddCategoryActivity.this, "Add category successfull", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(AddCategoryActivity.this, HomePageAdminActivity.class);
+                    Intent intent = new Intent(AddCategoryActivity.this, ListCategoryActivity.class);
                     startActivity(intent);
                 }
 
             }
         });
+        Button btnBack = findViewById(R.id.btn_add_category_back);
+        btnBack.setOnClickListener(v -> finish());
     }
 }

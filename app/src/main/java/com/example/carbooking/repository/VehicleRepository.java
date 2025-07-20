@@ -28,4 +28,8 @@ public class VehicleRepository {
     public List<Vehicle> getAllVehicle(){
         return  vehicleDao.selectAll();
     }
+
+    public void deleteVehicle(Vehicle vehicle) {
+        vehicleDao.delete(vehicle);
+    }
 }

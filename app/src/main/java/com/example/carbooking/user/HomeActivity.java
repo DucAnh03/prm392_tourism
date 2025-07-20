@@ -26,6 +26,9 @@ import com.example.carbooking.user.adapter.TourAdapter;
 import com.example.carbooking.user.decorator.GridSpacingItemDecoration;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private ActivityHomeBinding binding;
 
@@ -47,7 +50,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onResume() {
         super.onResume();
-        tourAdapter.submitList(tourRepository.getAllTour());
+        // Lọc chỉ lấy tour đang hoạt động
+        List<com.example.carbooking.Entity.Tour> allTours = tourRepository.getAllTour();
+        List<com.example.carbooking.Entity.Tour> activeTours = allTours.stream().filter(com.example.carbooking.Entity.Tour::isAvaliable).collect(Collectors.toList());
+        tourAdapter.submitList(activeTours);
     }
 
     private void initRepositories() {

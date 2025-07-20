@@ -40,6 +40,8 @@ public class HomePageAdminActivity extends AppCompatActivity {
     private CardView cardManageUser;
     private CardView cardManagerOrder;
     private CardView cardManagerLogout;
+    private CardView cardManageCategory;
+    private CardView cardManageVehicle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,6 +148,22 @@ public class HomePageAdminActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomePageAdminActivity.this, UserManagementActivity.class);
+                startActivity(intent);
+            }
+        });
+        cardManageCategory = findViewById(R.id.cardManageCategory);
+        cardManageCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePageAdminActivity.this, com.example.carbooking.admin.category.ListCategoryActivity.class);
+                startActivity(intent);
+            }
+        });
+        cardManageVehicle = findViewById(R.id.cardManageVehicle);
+        cardManageVehicle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePageAdminActivity.this, com.example.carbooking.admin.vehicle.ListVehicleActivity.class);
                 startActivity(intent);
             }
         });
