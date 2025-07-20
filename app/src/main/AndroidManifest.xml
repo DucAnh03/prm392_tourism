@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TravelApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".admin.user.UserDetailsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TourBooking"
+            android:exported="false" />
+        <activity
+            android:name=".admin.order.OrderManagement"
+            android:exported="false" />
+        <activity
+            android:name=".admin.order.OrderDetail"
+            android:exported="false" />
+        <activity
+            android:name=".admin.user.UserManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.vehicle.ListVehicleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NewPassword"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".admin.vehicle.DeleteVehicleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.vehicle.EditVehicleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.vehicle.AddVehicleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.category.ListCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.category.DeleteCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.category.EditCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.category.AddCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.tour.ListTourActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.tour.EditTourActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.tour.AddTourActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.HomePageAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".EditUser"
+            android:exported="false" />
+        <activity
+            android:name=".OrderTour.OrderDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginPage"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".OrderTour.ListOrder"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".user.HomeActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".user.TourDetailActivity"
+            android:exported="false">
+        </activity>
+    </application>
+
+
+</manifest>
