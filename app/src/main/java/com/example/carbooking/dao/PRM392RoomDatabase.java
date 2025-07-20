@@ -20,7 +20,7 @@ import com.example.carbooking.Entity.User;
 import com.example.carbooking.Entity.Vehicle;
 
 @Database(entities = {Category.class, Order.class,
-        Role.class, Status.class, Tour.class, User.class, Vehicle.class}, version = 6)
+        Role.class, Status.class, Tour.class, User.class, Vehicle.class}, version = 8)
 @TypeConverters({Converters.class})
 public abstract class PRM392RoomDatabase extends RoomDatabase {
     private static final String DB_NAME = "PRM392Database";
