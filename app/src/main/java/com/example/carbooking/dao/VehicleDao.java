@@ -5,6 +5,7 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
+import androidx.room.Delete;
 
 import com.example.carbooking.Entity.Vehicle;
 
@@ -25,4 +26,7 @@ public interface VehicleDao {
 
     @Query("DELETE FROM Vehicle")
     void deleteAll();
+
+    @Delete
+    void delete(Vehicle vehicle);
 }

@@ -166,6 +166,17 @@ public class EditTourActivity extends AppCompatActivity {
                     status = "false";
                 }
             });
+            EditText edtImageUrlEdit = findViewById(R.id.edt_image_url_edit);
+            Button btnLoadUrlEdit = findViewById(R.id.btn_load_url_edit);
+            btnLoadUrlEdit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String url = edtImageUrlEdit.getText().toString().trim();
+                    if (!url.isEmpty()) {
+                        Glide.with(EditTourActivity.this).load(url).into(imgViewEdit);
+                    }
+                }
+            });
             btnEditTour.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -185,7 +196,12 @@ public class EditTourActivity extends AppCompatActivity {
                     int vehicleIdSelected = selectedVehice.getId();
                     int voteNumber = tourById.getVotedNumber();
                     int voteScore = tourById.getVoteScore();
-                    String imgPath = saveImageToStorage.saveImageFromImageView(imgViewEdit);
+                    String imgPath;
+                    if (!edtImageUrlEdit.getText().toString().trim().isEmpty()) {
+                        imgPath = edtImageUrlEdit.getText().toString().trim();
+                    } else {
+                        imgPath = saveImageToStorage.saveImageFromImageView(imgViewEdit);
+                    }
                     boolean statusUpdate = true;
                     if(status.isEmpty()){
                          statusUpdate =  tourById.isAvaliable();;

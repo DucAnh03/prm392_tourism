@@ -49,6 +49,21 @@
                     android:textColor="@android:color/white"
                     android:textSize="18sp" />
 
+                <EditText
+                    android:id="@+id/edt_image_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter image URL"
+                    android:layout_marginTop="8dp"
+                    android:inputType="textUri" />
+
+                <Button
+                    android:id="@+id/btn_load_url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Load from URL"
+                    android:layout_marginTop="4dp" />
+
                 <!--ImageView to preview the selected image-->
                 <ImageView
                     android:id="@+id/IVPreviewImage"

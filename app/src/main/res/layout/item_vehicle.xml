@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center_vertical"
+    android:background="#E0F7FA">
+
+    <TextView
+        android:id="@+id/tv_vehicle_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="Vehicle Name"
+        android:textSize="16sp"
+        android:textColor="#333"
+        android:gravity="center_vertical" />
+
+    <ImageButton
+        android:id="@+id/btn_edit_vehicle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_edit"
+        android:background="@android:color/transparent"
+        android:contentDescription="Edit" />
+
+    <ImageButton
+        android:id="@+id/btn_delete_vehicle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_delete"
+        android:background="@android:color/transparent"
+        android:contentDescription="Delete" />
+
+</LinearLayout> 
