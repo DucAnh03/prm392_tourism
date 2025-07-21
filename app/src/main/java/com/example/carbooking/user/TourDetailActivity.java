@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -68,6 +69,19 @@ public class TourDetailActivity extends AppCompatActivity {
             binding.textTourSchedule.setText(tour.getTourSchdule());
             binding.textContact.setText(tour.getContactNumber());
             binding.textDescription.setText(tour.getDescription());
+
+            // Hiển thị điểm vote trung bình và số lượt vote
+            TextView textRatings = findViewById(R.id.text_ratings);
+            int votedNumber = tour.getVotedNumber();
+            int voteScore = tour.getVoteScore();
+            String ratingDisplay;
+            if (votedNumber > 0) {
+                float avg = (float) voteScore / votedNumber;
+                ratingDisplay = String.format("%.1f (%d)", avg, votedNumber);
+            } else {
+                ratingDisplay = "Chưa đánh giá";
+            }
+            textRatings.setText(ratingDisplay);
 
             // Bind category and vehicle
             String categoryName = new CategoryRepository(this).getCategory(tour.getCategoryId()).getCategoryName();

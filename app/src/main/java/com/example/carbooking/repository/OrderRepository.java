@@ -35,4 +35,7 @@ public class OrderRepository {
         return orderDao.getOrdersByUserId(userId);
     }
 
+    public void deleteOrderById(int orderId) {
+        orderDao.deleteById(orderId);
+    }
 }

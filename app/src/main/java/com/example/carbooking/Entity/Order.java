@@ -47,6 +47,10 @@ public class Order {
     @ColumnInfo(name = "endDate")
     private Date endDate;
 
+    @NotNull
+    @ColumnInfo(name = "isVoted")
+    private boolean isVoted = false;
+
     public int getId() {
         return id;
     }
@@ -121,5 +125,7 @@ public class Order {
         this.endDate = endDate;
     }
 
+    public boolean isVoted() { return isVoted; }
+    public void setVoted(boolean voted) { isVoted = voted; }
 
 }

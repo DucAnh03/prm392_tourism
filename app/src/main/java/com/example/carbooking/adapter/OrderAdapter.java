@@ -69,8 +69,9 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
             intent.putExtra("statusId", order.getStatusId());
             intent.putExtra("userName", user.getUserName());
             intent.putExtra("numPer", order.getNumberOfPerson());
-            intent.putExtra("orderDay", order.getOrderDate());
-            intent.putExtra("departDay", order.getDepartureDay());
+            intent.putExtra("orderDay", order.getOrderDate() != null ? order.getOrderDate().getTime() : -1);
+            intent.putExtra("departDay", order.getDepartureDay() != null ? order.getDepartureDay().getTime() : -1);
+            intent.putExtra("endDay", order.getEndDate() != null ? order.getEndDate().getTime() : -1);
             intent.putExtra("image", tour.getImage());
             context.startActivity(intent);
         });
