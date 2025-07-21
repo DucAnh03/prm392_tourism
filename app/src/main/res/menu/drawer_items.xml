@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_tour_management"
+        android:title="Tour Management">
+        <menu>
+            <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/navAddTour"
+                android:icon="@drawable/icon_add"
+                android:title="Add Tour"/>
+            <item
+                android:id="@+id/navEditTour"
+                android:icon="@drawable/icon_edit"
+                android:title="Edit Tour"/>
+            <item
+                android:id="@+id/navRemoveTour"
+                android:icon="@drawable/icon_delete"
+                android:title="Remove Tour"/>
+            </group>
+        </menu>
+    </item>
+<item
+    android:id="@+id/nav_user_management"
+    android:title="User Management"
+    android:icon="@drawable/emoji_people">
+</item>
+    <group android:id="@+id/report">
+        <item
+            android:icon="@drawable/icon_report"
+            android:id="@+id/navReport"
+            android:title="Order Management"/>
+        <item
+            android:id="@+id/navRevenue"
+            android:icon="@drawable/baseline_area_chart_24"
+        android:title="Revenue Dashboard"/>
+
+    </group>
+
+    <group android:id="@+id/common">
+        <item
+            android:icon="@drawable/icon_logout"
+            android:id="@+id/navLogout"
+            android:title="Log Out"/>
+    </group>
+</menu>

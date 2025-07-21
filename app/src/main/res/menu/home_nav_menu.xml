@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/action_home"
+            android:checked="true"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/action_history"
+            android:icon="@drawable/icon_history"
+            android:title="History" />
+    </group>
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            app:iconTint="#FF0000"
+            android:id="@+id/action_logout"
+            android:icon="@drawable/icon_logout"
+            android:title="Log Out" />
+    </group>
+</menu>

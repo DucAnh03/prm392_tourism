@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".admin.tour.EditTourActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="40dp"
+                    android:text="EDIT TOUR"
+                    android:textSize="40dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/BSelectImageEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="32dp"
+                    android:text="SELECT IMAGE"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <!--ImageView to preview the selected image-->
+                <ImageView
+                    android:id="@+id/IVPreviewImageEdit"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/BSelectImageEdit"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title: "
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edt_title_tour_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="8dp"
+                    android:hint="Enter tour title"
+                    android:background="@drawable/edt_text_background"
+                    android:paddingLeft="10dp"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location from: "
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edt_location_from_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/edt_text_background"
+                    android:hint="Enter location from"
+                    android:paddingLeft="10dp"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location to: "
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edt_location_to_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="8dp"
+                    android:hint="Enter location to"
+                    android:background="@drawable/edt_text_background"
+                    android:paddingLeft="10dp"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tour time: "
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edt_tour_time_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/edt_text_background"
+                    android:hint="Enter tour time"
+                    android:paddingLeft="10dp"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date number: "
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edt_date_number_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="8dp"
+                    android:hint="Enter number of dates"
+                    android:background="@drawable/edt_text_background"
+                    android:paddingLeft="10dp"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tour Schedule: "
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edt_tour_schedule_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="8dp"
+                    android:hint="Enter tour schedule"
+                    android:background="@drawable/edt_text_background"
+                    android:paddingLeft="10dp"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price per person: "
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edt_price_person_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="8dp"
+                    android:hint="Enter price per person"
+                    android:background="@drawable/edt_text_background"
+                    android:paddingLeft="10dp"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact: "
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edt_contact_number_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/edt_text_background"
+                    android:hint="Enter phone number"
+                    android:paddingLeft="10dp"
+                    android:textSize="20dp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:paddingRight="15dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category: "
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinner_category_edit"
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/edt_text_background"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="15dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vehicle: "
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinner_vehicle_edit"
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/edt_text_background"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status: "
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <RadioGroup
+                    android:id="@+id/radioGroupActive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <RadioButton
+                        android:id="@+id/radio_active"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Active" />
+
+                    <RadioButton
+                        android:id="@+id/radio_ban"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ban" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description: "
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edt_description_tour_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="top|start"
+                    android:background="@drawable/edt_text_background"
+                    android:hint="Enter tour description..."
+
+                    android:inputType="textMultiLine"
+                    android:lines="4"
+                    android:minLines="3"
+                    android:paddingLeft="10dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_editTour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginBottom="100dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Save" />
+                    <Button
+                        android:id="@+id/btn_edit_tour_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginBottom="100dp"
+                        android:layout_marginRight="20dp"
+                        android:text="BACK" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

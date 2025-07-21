@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="3"
+    android:background="#BBD37F"
+    android:divider="?android:attr/dividerVertical"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_tour_title"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/tv_price_per_person"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"/>
+
+        <ImageView
+            android:id="@+id/img_status"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:scaleType="centerInside" />
+
+        <ImageButton
+            android:id="@+id/imb_edit"
+            android:layout_width="3dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="#98FB98"
+            android:gravity="center"
+            android:src="@drawable/icon_edit"
+            android:textSize="16sp"
+            android:contentDescription="edit"/>
+
+        <ImageButton
+            android:id="@+id/imb_remove"
+            android:layout_width="3dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="5dp"
+            android:background="#98FB98"
+            android:gravity="center"
+            android:src="@drawable/ic_delete"
+            android:textSize="16sp"
+            android:contentDescription="delete"/>
+
+
+
+</LinearLayout>

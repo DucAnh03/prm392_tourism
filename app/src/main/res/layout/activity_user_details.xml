@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".EditUser">
+
+    <TextView
+        android:id="@+id/UserManagement_details_title_regis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:fontFamily="@font/aliey_regular"
+        android:gravity="center"
+        android:text="User Details"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:transitionName="textnameApp" />
+    <ImageView
+        android:id="@+id/UserManagement_details_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transitionName="txt_user"
+            android:id="@+id/UserManagement_details_username"
+            app:startIconDrawable="@drawable/ic_user"
+            app:startIconTint="@color/black"
+            android:hint="Username"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            app:counterMaxLength="15"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            style="@style/LoginTextInputLayoutStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:paddingStart="48dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/UserManagement_details_email"
+            app:startIconDrawable="@drawable/ic_email"
+            app:startIconTint="@color/black"
+            android:hint="Email"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            style="@style/LoginTextInputLayoutStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:focusable="false"
+                android:paddingStart="48dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/UserManagement_details_phone"
+            app:startIconDrawable="@drawable/ic_phone"
+            app:startIconTint="@color/black"
+            android:hint="Number Phone"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            style="@style/LoginTextInputLayoutStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:focusable="false"
+                android:textColor="@color/black"
+                android:paddingStart="48dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transitionName="txt_address"
+            android:id="@+id/UserManagement_details_address"
+            app:startIconDrawable="@drawable/ic_email"
+            app:startIconTint="@color/black"
+            android:hint="Address"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            style="@style/LoginTextInputLayoutStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:focusable="false"
+                android:textColor="@color/black"
+                android:paddingStart="48dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transitionName="txt_role"
+            android:id="@+id/UserManagement_details_role"
+            app:startIconDrawable="@drawable/ic_user"
+            app:startIconTint="@color/black"
+            android:hint="Role"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            style="@style/LoginTextInputLayoutStyle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:paddingStart="48dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/UserManagement_details_btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:transitionName="txt_login_signup"
+        android:text="BACK"
+        android:backgroundTint="@color/bgColorSplash"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+</LinearLayout>
